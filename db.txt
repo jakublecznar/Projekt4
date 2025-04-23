@@ -6,3 +6,4 @@ Krzysztof 20
 Janusz 40
 KUBA 20
 KUBA 20
+KUBA 20
