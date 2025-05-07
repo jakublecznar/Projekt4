@@ -1,5 +1,4 @@
 
-
 import java.io.IOException;
 import java.util.Scanner;
 
@@ -37,11 +36,14 @@ class Main {
               }
             }
 
-            s.addStudent(new Student(name, lastname, age));
-            System.out.println(" Dodano studenta.");
+            System.out.print("Podaj datę urodzenia (DD-MM-YYYY): ");
+            String birthDate = scanner.nextLine();
+
+            s.addStudent(new Student(name, lastname, age, birthDate));
+            System.out.println("Dodano studenta.");
             break;
 
-          case 2:
+            case 2:
             var students = s.getStudents();
             System.out.println("📋 Lista studentów:");
             for (Student current : students) {
@@ -51,10 +53,8 @@ class Main {
         }
       }
       scanner.close();
-
-
     } catch (IOException e) {
-
+      System.out.println("Wystąpił błąd: " + e.getMessage());
     }
   }
 }
